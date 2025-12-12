@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Careers – Morarka Foundation</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" alt="Website Favicon" />
+  <!-- Bootstrap icons-->
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Include Bootstrap -->
+ <!--- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2css/bootstrap.min.css" rel="stylesheet">-->
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="header"></div>
+  <section class="container py-5">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h2 class="text-uppercase fw-bold text-success">Career Oppo<span class="text-warning">rtunities</span></h2>
+      <p class="lead text-muted textt">Join a purpose-driven organization making a difference in rural development and
+        sustainability.</p>
+    </div>
+
+    <!-- HR Policy Section -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="image/photo.jpeg" alt="HR Policy" class="img-fluid rounded shadow w-100">
+      </div>
+      <div class="col-md-6">
+        <h4 class="fw-bold text-warning mb-3">Human Resource Policy and Recruitment</h4>
+
+        <div id="hrText" style="max-height: 100px; overflow: hidden; transition: max-height 0.5s ease;">
+          <p id="hrPara" class="text-muted mb-2 my-2">
+            Morarka Foundation has grown from a grassroots voluntary initiative into a professional service delivery
+            agency over the past 20 years. Our evolving HR policy has played a crucial role in this journey. We began by
+            recruiting from local field areas and gradually transitioned to onboarding qualified professionals through
+            academic collaborations, ensuring job guarantees to selected candidates. Currently, we hire around 20
+            professionals yearly—ranging from trainees to senior experts—and also collaborate with external agencies for
+            specialized functions.
+          </p>
+        </div>
+
+        <button id="readBtn" class="btn btn-warning btn-sm mt-2" onclick="toggleHRText()">Read More</button>
+      </div>
+
+
+      <!-- Organizational Hierarchy Section -->
+      <div class="bg-light p-4 rounded shadow-sm mb-5 mt-3">
+        <h4 class="fw-bold text-warning"><i class="fas fa-sitemap me-2"></i>Organizational Hierarchy</h4>
+        <p>Morarka Foundation has implemented a robust professional structure with five entry levels, ensuring clarity,
+          growth, and career advancement.</p>
+        <a href="files/organizational_hierarchy_chart.pdf" class="btn btn-outline-primary mt-2" target="_blank">
+          <i class="fas fa-download me-2"></i>Download Hierarchy Chart
+        </a>
+      </div>
+
+      <!-- Vacancy Section -->
+      <div class="mb-5">
+        <h4 class="fw-bold text-warning mb-3"><i class="fas fa-briefcase me-2"></i>Current Vacancies</h4>
+        <p>Currently No Vacancy :</p>
+       <!-- <div class="row">
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Marketing</li>
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Finance</li>
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Accounts</li>
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Information Technology</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Biotechnology</li>
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Program Management</li>
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>Program Delivery</li>
+              <li class="list-group-item"><i class="fas fa-circle text-success me-2"></i>International Operations</li>
+            </ul>
+          </div>
+        </div>-->
+      </div>
+
+      <!-- Resume Submission -->
+      <div class="text-center">
+        <h5 class="fw-bold mb-3">Ready to make an impact?</h5>
+        <a href="submit_resume.html" class="btn btn-warning btn-lg px-4 py-2">
+          <i class="fas fa-paper-plane me-2"></i>Submit Your Resume
+        </a>
+      </div>
+  </section>
+
+
+  <div id="footer"></div>
+  <!-- Core theme JS-->
+  <script src="scripts-load.js"></script>
+  <script>
+    const myCarousel = document.querySelector('#myCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 3000, // 3 seconds
+      ride: 'carousel'
+    });
+  </script>
+
+  <script>
+    const textBox = document.getElementById("hrText");
+    const para = document.getElementById("hrPara");
+    const button = document.getElementById("readBtn");
+
+    // Hide button if no overflow
+    window.addEventListener("load", () => {
+      if (para.scrollHeight <= 100) {
+        button.style.display = "none";
+      }
+    });
+
+    function toggleHRText() {
+      if (textBox.style.maxHeight === "100px") {
+        textBox.style.maxHeight = "1000px";
+        button.textContent = "Read Less";
+      } else {
+        textBox.style.maxHeight = "100px";
+        button.textContent = "Read More";
+      }
+    }
+  </script>
+  <script>
+    // Load Header
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    // Load Footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+
+</body>
+
+</html>
