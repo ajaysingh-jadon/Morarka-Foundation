@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Services - Morarka Foundation</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" alt="Website Favicon" />
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    
+    <style>
+    /* ===== Page-level tweaks (minimal, safe) ===== */
+    body { overflow-x: hidden; background: linear-gradient(180deg,#f7fbf7 0%, #ffffff 60%); }
+
+    .services-hero {
+      padding: 60px 0 40px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .services-hero .container { position: relative; z-index: 3; }
+
+    .hero-title { font-size: 2.4rem; letter-spacing: -0.02em; }
+    .hero-sub { max-width: 920px; margin: 12px auto 0; color: #58606a; }
+
+    /* ===== Floating ambient blobs (decorative) ===== */
+    .blob {
+      position: absolute;
+      pointer-events: none;
+      filter: blur(48px);
+      opacity: 0.95;
+      z-index: 1;
+      mix-blend-mode: multiply;
+      transform: translateZ(0);
+    }
+
+    /* ===== Glass / modern service card ===== */
+    .service-card {
+      position: relative;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.65));
+      border: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 30px rgba(18, 32, 22, 0.06);
+      overflow: hidden;
+      transition: transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .45s;
+      padding: 26px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-14px) scale(1.02);
+      box-shadow: 0 28px 60px rgba(18, 32, 22, 0.14);
+    }
+
+    /* gradient outline (subtle) */
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      padding: 1.5px;
+      background: linear-gradient(90deg, rgba(255,193,7,0.18), rgba(40,167,69,0.18));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity .35s;
+      pointer-events: none;
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    /* icon */
+   .service-icon {
+  width: 100%;
+  height: 280px;          /* Fix height */
+  object-fit: cover;      /* Crop nicely */
+  border-radius: 18px;    /* Smooth modern corners */
+  transition: transform .6s cubic-bezier(.2,.9,.2,1), filter .35s;
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.15));
+}
+
+.service-card:hover .service-icon {
+  transform: translateY(-6px) scale(1.05) rotate(1deg);
+}
+
+
+    /* title gradient on hover */
+    .service-card h3 {
+      font-weight: 700;
+      transition: background 0.45s, color 0.45s;
+    }
+    .service-card:hover h3 {
+      background: linear-gradient(90deg,#ffc107,#28a745);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* description */
+    .service-desc { color: #4a5259; line-height: 1.7; }
+
+    /* badge small */
+    .service-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .28rem .6rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      background: rgba(40,167,69,0.07);
+      color: #1e5f30;
+      border: 1px solid rgba(40,167,69,0.08);
+    }
+
+    /* alternating layout for cards on wide screens */
+    .service-row { margin-bottom: 36px; }
+    @media (min-width: 992px) {
+      .service-row.reverse .service-image { order: 2; }
+      .service-row.reverse .service-content { order: 1; text-align: left; }
+    }
+
+    /* SVG divider */
+    .wave-divider { display:block; width:100%; margin-top: -2px; }
+
+    /* particles canvas sits behind content */
+    #particles-canvas { position: absolute; inset: 0; z-index: 0; pointer-events: none; max-width: 100%; 
+    }
+
+    /* small responsive tweaks */
+    @media (max-width: 767px) {
+      .service-icon { margin-bottom: 14px; }
+      .hero-title { font-size: 1.8rem; }
+
+    }
+
+    
+  </style>
+
+</head>
+<body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+
+    <!-- header is injected by your existing loader -->
+    <div id="header"></div>
+
+    <!-- HERO with ambient blobs + particles -->
+    <section class="services-hero text-center">
+      <canvas id="particles-canvas"></canvas>
+
+      <!-- ambient blobs (SVG shapes with gradient) -->
+      
+      <div class="container">
+        <h1 class="hero-title text-success" data-aos="fade-up">Our <span class="text-warning">Services</span></h1>
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="120">
+          "We integrate policy, practice, and market linkages to empower farmers, restore ecosystems,
+          and build resilient, future-ready food systems."
+        </p>
+      </div>
+    </section>
+
+    <!-- wavy divider -->
+
+    <!-- SERVICES LIST (stacked cards, graphic-rich) -->
+    <section class="container py-5 position-relative" style="z-index:2;">
+
+      <!-- Card 1 -->
+      <div class="row service-row align-items-center mb-4" data-aos="fade-up" data-aos-duration="900">
+        <div class="col-lg-4 text-center service-image">
+          <img class="service-icon" src="image/media_center/event10.jpeg" alt="Field image" class="img-fluid rounded w-100">
+        </div>
+
+        <div class="col-lg-8 service-content">
+          <div class="service-card">
+            <div class="d-flex align-items-start justify-content-between mb-2">
+              <div>
+                <span class="service-badge"><i class="bi bi-gear-wide-connected"></i> Implementation</span>
+              </div>
+              <div class="text-muted small">Trusted • Field-first • Scalable</div>
+            </div>
+
+            <h3 class="mb-3">Service Provider to Implementing Agencies</h3>
+            <p class="service-desc">
+              MR Morarka GDC Rural Research Foundation acts as a strategic service provider to implementing agencies,
+              enabling effective rollout of agriculture and rural development initiatives. Our expertise includes
+              FPO formation, capacity building & training programs, Internal Control System (ICS) design, monitoring,
+              and on-ground implementation support. With strong grassroots presence and deep institutional experience,
+              we connect policy and practice to deliver measurable outcomes.
+            </p>
+
+            <div class="mt-3 d-flex gap-3 flex-wrap">
+              <a class="btn btn-outline-success btn-sm" href="contact.html">Connect with us</a>
+              <a class="btn btn-success btn-sm" href="aboutus.html">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 (reverse layout on desktop) -->
+      <div class="row service-row reverse align-items-center mb-4" data-aos="fade-up" data-aos-duration="900" data-aos-delay="120">
+        <div class="col-lg-4 text-center service-image">
+          <img class="service-icon" src="image/market.jpg" alt="Produce image (replace)" class="img-fluid rounded w-100">
+        </div>
+
+        <div class="col-lg-8 service-content">
+          <div class="service-card">
+            <div class="d-flex align-items-start justify-content-between mb-2">
+              <div>
+                <span class="service-badge"><i class="bi bi-basket3"></i> Market</span>
+              </div>
+              <div class="text-muted small">Traceable • Fair • Premium</div>
+            </div>
+
+            <h3 class="mb-3">Produce Sales & Market Linkages</h3>
+            <p class="service-desc">
+              We partner with farmer collectives to aggregate and market organic produce for domestic and international markets.
+              Services include aggregation, cold-chain & processing support, product development for premium segments,
+              and transparent pricing models that uplift farmers' incomes and guarantee quality for buyers.
+            </p>
+
+            <div class="mt-3 d-flex gap-3 flex-wrap">
+              <a class="btn btn-outline-success btn-sm" href="#">View programs</a>
+              <a class="btn btn-success btn-sm" href="#market">Our markets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- call-to-action -->
+      <div class="row mt-5">
+        <div class="col text-center">
+          <div class="p-4 rounded-3" style="background:linear-gradient(90deg,#f6fff6,#fffaf0); border:1px solid rgba(40,167,69,0.06);">
+            <h4 class="mb-2">Want to collaborate or partner?</h4>
+            <p class="mb-3 text-muted">Reach out and we'll co-design a program that fits the needs of your region and beneficiaries.</p>
+            <a class="btn btn-lg btn-success" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- footer injected by your loader -->
+    <div id="footer"></div>
+
+    <!-- script -->
+    <script src="scripts-load.js"></script>
+
+    <!-- Lightweight particles (tiny custom implementation; no external lib) -->
+    <script>
+      // Simple particle system (small, performant)
+      (function () {
+        const canvas = document.getElementById('particles-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let w, h, particles;
+        function resize() {
+          w = canvas.width = window.innerWidth;
+          h = canvas.height = document.querySelector('.services-hero').offsetHeight || window.innerHeight * 0.4;
+          canvas.style.height = h + 'px';
+        }
+        function init() {
+          resize();
+          particles = [];
+          const count = Math.min(36, Math.floor(w / 60));
+          for (let i = 0; i < count; i++) {
+            particles.push({
+              x: Math.random() * w,
+              y: Math.random() * h,
+              r: 2 + Math.random() * 3,
+              vx: (Math.random() - 0.5) * 0.25,
+              vy: -0.2 - Math.random() * 0.4,
+              alpha: 0.06 + Math.random() * 0.12,
+              life: 60 + Math.random() * 200
+            });
+          }
+        }
+        function tick() {
+          ctx.clearRect(0, 0, w, h);
+          for (let p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.life--;
+            if (p.y < -10 || p.life < 0) {
+              p.x = Math.random() * w;
+              p.y = h + 20;
+              p.life = 60 + Math.random() * 200;
+            }
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(40,167,69," + p.alpha + ")";
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          requestAnimationFrame(tick);
+        }
+        window.addEventListener('resize', () => { resize(); });
+        init();
+        tick();
+      })();
+    </script>
+
+    <!-- small parallax for blobs -->
+    <script>
+      (function () {
+        const blobs = document.querySelectorAll('.blob');
+        if (!blobs.length) return;
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', () => {
+          const delta = window.scrollY - lastY;
+          lastY = window.scrollY;
+          blobs.forEach((b, i) => {
+            const speed = (i + 1) * 0.12;
+            const cur = (parseFloat(b.getAttribute('data-ty') || 0) || 0) + delta * speed;
+            b.style.transform = `translateY(${cur * -0.15}px)`;
+            b.setAttribute('data-ty', cur);
+          });
+        }, { passive: true });
+      })();
+    </script>
+
+    <script>
+      // init AOS after DOM and header/footer injection (gives AOS visible elements)
+      document.addEventListener('DOMContentLoaded', function() {
+        // small delay helps if header/footer injection uses JS
+        setTimeout(function(){ AOS.init({ once:true, duration:900, easing: 'ease-out-quart' }); }, 280);
+      });
+    </script>
+
+  </main>
+</body>
+</html>

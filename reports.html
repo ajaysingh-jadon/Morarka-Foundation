@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reports – Morarka Foundation</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+   <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <style>
+    body { overflow-x: hidden; }
+
+    .hero {
+         background: linear-gradient(to right, rgba(0,77,64,0.4), rgba(0,105,92,0.4)),
+            url(image/reporthaeder.avif) center/cover no-repeat;
+      
+    }
+    .hero p.lead {
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+
+    .reports-section {
+      padding: 60px 0;
+    }
+
+    .report-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s ease;
+      height: 100%;
+    }
+
+    .report-cover {
+      width: 90%;
+      height: 300PX;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .report-card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .report-card-body h5 {
+      font-size: 20px;
+      color: #0b6b3a;
+      margin-bottom: 10px;
+    }
+
+    .report-card-body p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .btn-download {
+      background-color: #198754;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-download i {
+      margin-left: 6px;
+    }
+
+    /* 📱 FULL RESPONSIVE FIXES */
+    @media (max-width: 991px) {
+      .col-md-3 {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .reports-hero h1 { font-size: 32px; }
+
+      .col-md-3 {
+        width: 100%;
+      }
+
+      .report-cover {
+        width: 85%;
+        height: auto;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <section class="hero" data-aos="fade-up">
+    <div class="container">
+      <h1 class="color">REPORTS &amp; PUBLICATIONS</h1>
+      <p class="lead hero-font">
+        Transparency, impact stories & annual reports — available for download and review.
+      </p>
+      <div class="breadcrumb-custom mt-3 hero-font">
+      <a href="index.html" class="hero-font"><i class="bi bi-house-door "></i> Home /</a> <span class="active-page hero-font">Reports</span>
+    </div>
+    </div>
+  </section>
+
+  <section class="reports-section">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Report Card -->
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="report-card">
+            <img src="image/annual-report2023.jpeg" class="report-cover" alt="">
+            <div class="report-card-body">
+              <h5>Annual Report 2021-22</h5>
+              <p style="border-top: 2px solid #ffc107;">A comprehensive report covering our programs and impact metrics.</p>
+              <a href="#" class="btn-download  btn butt">Download <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="report-card">
+            <img src="image/annual-report2022.jpeg" class="report-cover" alt="">
+            <div class="report-card-body">
+              <h5>Annual Report 2022-23</h5>
+              <p style="border-top: 2px solid #ffc107;">A comprehensive report covering our programs and impact metrics.</p>
+              <a href="#" class="btn-download  btn butt">Download <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="report-card">
+            <img src="image/annual-report2021.jpeg" class="report-cover" alt="">
+            <div class="report-card-body">
+              <h5>Annual Report 2023-24</h5>
+              <p style="border-top: 2px solid #ffc107;">A comprehensive report covering our programs and impact metrics.</p>
+              <a href="#" class="btn-download  btn butt">Download <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+        </div>
+      
+        
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script src="scripts-load.js"></script>
+</body>
+</html>
