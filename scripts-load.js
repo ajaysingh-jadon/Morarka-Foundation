@@ -1,6 +1,6 @@
 
 const bootstrapScript = document.createElement("script");
-bootstrapScript.src = "js/bootstrap.bundle.min.js";
+bootstrapScript.src = "js/bootstrap.bundle.min.css";
 document.body.appendChild(bootstrapScript);
 
 fetch("header.html")
@@ -36,4 +36,5 @@ aosScript.onload = () => {
     }
 };
 document.body.appendChild(aosScript);
+
 
