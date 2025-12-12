@@ -13,14 +13,18 @@
 
     <style>
         /* Card styling improved */
-        .offer-hero
+
+        .container, .row, .col {
+         max-width: 100%;
+        overflow-x: clip;
+       }
+        .hero
         {
-            padding: 120px 0;
+            
             background:
             linear-gradient(to right, rgba(0,77,64,0.4), rgba(0,105,92,0.4)),
             url(image/media_center/event8.jpeg) center/cover no-repeat;
-            color: #fff;
-            text-align:center;
+            
         }
         .collab-card {
             border: none;
@@ -56,7 +60,7 @@
 <div id="header"></div>
 
 <!-- HERO -->
-<section class=" bg-light offer-hero" data-aos="fade-up">
+<section class=" bg-light hero" data-aos="fade-up">
     <div class="container text-center">
         <h1 class="fw-bold text-warning">Offer for Collaboration</h1>
         <p class="mt-2" style="max-width:800px; margin:auto;">
@@ -112,3 +116,4 @@
 
 </body>
 </html>
+
