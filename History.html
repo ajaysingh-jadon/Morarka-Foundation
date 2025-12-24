@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>History – Morarka Foundation</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" alt="Website Favicon" />
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f7f8;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(to right, rgba(0, 105, 92, 0.6), rgba(0, 77, 64, 0.6)),
+        url(image/cover/milestone.jpeg) center/cover no-repeat;
+    }
+
+    /*.hero p { font-size: 20px; max-width: 700px; margin: 10px auto 0; }*/
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding: 60px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      bottom: 50px;
+      left: 50%;
+      width: 7px;
+      background: #198754;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+    }
+
+    .timeline-item .timeline-year {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background: #ffc107;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-item .timeline-year p {
+      width: 40px;
+      margin: auto;
+    }
+
+    .timeline-content {
+
+      padding: 0px 12px;
+      min-height: 250px;
+      height: auto;
+    }
+
+    .timeline-img img {
+      width: 96%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: auto;
+    }
+
+    .timeline-semi-content {
+      background: #fff;
+      width: 96%;
+      min-height: 280px;
+      height: auto;
+      border-radius: 12px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Alternate left/right on large screens */
+    @media (min-width: 768px) {
+      .timeline-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .timeline-row:nth-child(even) .timeline-img {
+        order: 2;
+      }
+
+      .timeline-row:nth-child(even) .timeline-content {
+        order: 1;
+      }
+
+      .timeline-row .col-lg-5 {
+        flex: 0 0 45%;
+        max-width: 45%;
+      }
+    }
+
+    /* Small screens */
+    @media (max-width: 768px) {
+      .timeline::before {
+        display: none;
+      }
+
+      .timeline-item .timeline-year {
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .timeline-row {
+        display: block;
+      }
+
+      .timeline-content {
+        margin-top: 15px;
+      }
+
+      .timeline-img img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="text-warning">Journey of Morarka Foundation</h1>
+    <p>From humble beginnings to national recognition – milestones in sustainable development and organic agriculture.
+    </p>
+    <div class="breadcrumb-custom mt-3">
+      <a href="index.html" class="hero-font"><i class="bi bi-house-door hero-font"></i> Home</a> <span
+        class="active-page hero-font">/ Milestones</span>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="container timeline">
+
+    
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">1990 | 1994</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img">
+          <img src="image/history/establishment4.jpg" alt="1990-1994 Establishment">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">1991 – Establishment and Inception</h4>
+            <p>Morarka Foundation was established in Nawalgarh, Rajasthan, with a clear mandate to promote rural development, sustainable agriculture, and community-driven growth models aimed at improving livelihoods in underserved communities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">1994 | 1998</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/history/introducton.jpeg" alt="1990-1994 Establishment">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">1994–1998 – Introduction of Organic Farming Initiatives</h4>
+            <p>The Foundation launched large-scale field interventions to promote organic farming through structured farmer training and village-level capacity building. These initiatives led to the successful cultivation and promotion of organic pulses and vegetables, laying the foundation for sustainable agricultural practices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2000 | 2004</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img">
+          <img src="image/history/19973.jpg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2002–2004 – Expansion into Research & Development</h4>
+            <p>With a strong focus on innovation and appropriate technologies, Morarka Foundation significantly strengthened its research and development efforts. Its R&D journey, which began in 1995 with farm waste recycling using traditional and modern methods, emphasized the development and promotion of vermiculture technology. By 2000, the Foundation had emerged as India’s largest producer of vermicompost, reinforcing its leadership in organic inputs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2004 | 2005</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/history/2000.jpg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2004–2005 – Market Linkages & Retail Entry</h4>
+            <p>Structured procurement and strong market linkages were established to ensure assured markets and better price realization for farmers. In 2005, Morarka Organic Food Limited (MOFL) was launched to directly connect farmers with consumers and institutional buyers, strengthening sustainable livelihoods.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2005 | 2006</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img">
+          <img src="image/history/npop.webp" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2005 – ICS Launch & Organic Expansion</h4>
+            <p>The Foundation introduced a structured Internal Control System (ICS) to enable cost-effective group organic certification, improving access for small and marginal farmers. Organic programmes expanded beyond Rajasthan to multiple states, with Morarka-supported groups securing their first NPOP certifications—marking the Foundation as a pioneer in group certification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2006 | 2010</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/media_center/event8.jpeg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2006–2010 – Value Addition, Processing Initiatives & National Recognition</h4>
+            <p>Morarka Foundation expanded into grading, processing, and value-addition infrastructure to strengthen the organic value chain and maximize farmer returns. During this period, the Foundation received national recognition from government agencies and development organizations as one of India’s largest facilitators of organic grower groups.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!--
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2010 | 2013</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/history/recognization2.jpg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2010-2013 – National Recognition for Organic Promotion</h4>
+            <p>Government and development agencies recognise Morarka Foundation as one of the largest organic grower
+              group facilitators in the country.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2013 | 2017</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img">
+          <img src="image/history/smartframing.jpg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2013–2017 – Digitalization & Strengthening of ICS and FPOs</h4>
+            <p>To enhance traceability and compliance, the Foundation introduced digital documentation systems, GPS-based farm mapping, and integrated MIS platforms. Concurrently, targeted support was extended to multiple Farmer Producer Organizations (FPOs) focusing on governance strengthening, organic value chain development, and enterprise creation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2018 | 2019</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/history/seeds.jpeg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2018–2019 – Diversification into Niche Organic Crops & Climate-Resilient Practices</h4>
+            <p>Growers were supported in diversifying into high-value and niche organic crops such as quinoa, chia, pulses, spices, and oilseeds for premium domestic and export markets. During this phase, integrated climate-resilient agricultural practices—including water conservation, soil regeneration, biodiversity enhancement, and sustainable land-use models—were systematically implemented.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2020 | 2022</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img">
+          <img src="image/history/shia2.avif" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2020–2022 – COVID-19 Response, Farmer Support & Technology Integration</h4>
+            <p>During the COVID-19 pandemic, the Foundation prioritized & safeguarded farmer livelihoods by ensuring uninterrupted market access and continuity of supply chains, resulting in excellent sales performance for organic produce.
+            Simultaneously, advanced digital tools were deployed to strengthen certification and traceability systems, including mobile-based ICS monitoring, geo-tagged inspections, digital audit readiness, and enhanced traceability mechanisms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+     
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2023 | Present</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/media_center/event10.jpeg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2023–Present – Strengthening Market Connectivity & Programme Expansion</h4>
+            <p>The Foundation continues to deepen market linkages through collaborations with domestic brands, exporters, and institutional buyers, ensuring stable demand, fair pricing, and long-term market security for organic farmers. In parallel, Morarka Foundation is actively implementing and managing multiple organic farming projects across North India.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   <!--+======================================================= OLD CARDS======================================================-->
+    <!--<div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2022 | 2024</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img">
+          <img src="image/media_center/event11.jpeg" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2022-2024 – Integration of Technology for Certification & Traceability</h4>
+            <p>Use of digital record-keeping, mobile-based ICS monitoring, geo-tagged inspections, and digital audit
+              readiness solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-year">
+        <p class="text-center">2024 | Persent</p>
+      </div>
+      <div class="row timeline-row align-items-center">
+        <div class="col-lg-5 timeline-img order-0">
+          <img src="image/history/partnership_0.webp" alt="1994-1997 Organic Initiatives">
+        </div>
+        <div class="col-lg-5 timeline-content">
+          <div class="timeline-semi-content">
+            <h4 class="text-primary">2024-Persent – Strengthening Market Connectivity</h4>
+            <p>Expanded collaborations with domestic brands, exporters, and institutional buyers to ensure stable demand
+              for farmer-grown organic produce.</p>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+
+    
+
+  </section>
+
+  <div id="footer"></div>
+  <script src="scripts-load.js"></script>
+
+</body>
+
+</html>
